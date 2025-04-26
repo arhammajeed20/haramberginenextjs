@@ -1,0 +1,182 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import SocialLinks from "./Sociallinks";
+
+export default function Navbar() {
+  const [colorChange, setColorChange] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    const changeNavbarColor = () => {
+      setColorChange(window.scrollY > 50);
+    };
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", changeNavbarColor);
+    }
+
+    return () => window.removeEventListener("scroll", changeNavbarColor);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setOpenSidebar(false);
+      }
+    };
+
+    if (openSidebar) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
+    };
+  }, [openSidebar]);
+
+  const menuItems = [
+    { name: "Home", link: "introduction" },
+    { name: "Who is HaramBergine", link: "" },
+    { name: "Tokenomics", link: "tokenomics" },
+    { name: "Roadmap", link: "roadmap" },
+    { name: "How to Buy", link: "howtobuy" },
+    { name: "FAQ", link: "faq" },
+  ];
+
+  const handleScroll = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      const navbarHeight = 100;
+      const offsetPosition =
+        element.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+    setOpenSidebar(false);
+  };
+
+  return (
+    <>
+      {/* Navbar */}
+      <div
+        className={`fixed w-full ${
+          colorChange
+            ? "bg-black/80 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
+        } transition-all duration-300 ease-in-out z-50 py-2.5`}
+      >
+        <div className="container max-w-7xl mx-auto px-4">
+          <div className="flex justify-between items-center">
+            {/* Logo */}
+            <Link href="/" className="cursor-pointer flex items-center">
+              <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
+                H
+              </div>
+              <span className="ml-2 text-xl font-bold">
+                Haram<span className="text-yellow-400">bergine</span>
+              </span>
+            </Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden lg:flex space-x-3 justify-center overflow-auto">
+              {menuItems.map((item, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleScroll(item.link)}
+                  className="text-white text-sm font-normal relative px-3 py-1.5 hover:before:content-[''] hover:before:absolute hover:before:inset-0 hover:before:border-2 hover:before:border-[#1FA7C9] hover:before:rounded-full hover:before:transition-all hover:before:duration-300"
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Hamburger Icon (Mobile + Tablet) */}
+            <button
+              className="lg:hidden text-white" // changed from md:hidden
+              onClick={() => setOpenSidebar(true)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+
+            {/* Connect Wallet Button (Desktop Only) */}
+            <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2.5 px-5 hover:opacity-90 transition-all">
+              <span className="font-semibold text-base font-urbanist">
+                Buy HBE🚀
+              </span>
+            </button>
+            <SocialLinks />
+          </div>
+        </div>
+      </div>
+
+      {/* Sidebar Drawer - Overlay */}
+      {openSidebar && (
+        <div className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm lg:hidden transition-opacity duration-300">
+          <div
+            ref={sidebarRef}
+            className="fixed right-0 top-0 h-full w-64 bg-black/80 backdrop-blur-md text-white p-5 shadow-lg transform transition-transform duration-300 translate-x-0"
+          >
+            <div className="flex justify-between items-center mb-2">
+              <h2 className="font-bold text-xl">Menu</h2>
+              <button onClick={() => setOpenSidebar(false)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="text-center">
+              <ul className="space-y-2">
+                {menuItems.map((item, index) => (
+                  <li key={index} className="py-2">
+                    <button
+                      onClick={() => handleScroll(item.link)}
+                      className="w-full text-center py-2"
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <button className="w-full mt-4 bg-purple-600 text-white py-2 rounded">
+              Buy HBE🚀
+            </button>
+            <SocialLinks />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
