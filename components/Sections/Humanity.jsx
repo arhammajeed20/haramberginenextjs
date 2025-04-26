@@ -31,10 +31,8 @@ export default function Humanity() {
 
         <div className="max-w-5xl mx-auto w-full" id="presale-widget">
           <div className="flex flex-col md:flex-row gap-4 w-full max-w-none">
-            {/* Token Information Card */}
             <TokenInfoCard />
 
-            {/* Presale Widget Card */}
             <BuyWingCard />
           </div>
         </div>

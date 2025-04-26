@@ -8,7 +8,6 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white overflow-hidden relative pt-10">
       <div className="container mx-auto px-4 py-12 relative">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Left side content */}
           <div className="z-10 mb-10 lg:mb-0">
             <div className="flex items-center mb-4">
               <h1 className="text-4xl md:text-6xl font-bold">
@@ -61,10 +60,8 @@ export default function Home() {
             <p className="text-xs mt-6 text-gray-400">*Absurd but real.</p>
           </div>
 
-          {/* Right side image */}
           <div className="relative z-10">
             <div className="relative animate-pulse">
-              {/* Replace the URL below with your own image URL when you have it */}
               <Image
                 src={heroimage}
                 alt="Custom hero image"
@@ -80,7 +77,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Floating elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (
           <div

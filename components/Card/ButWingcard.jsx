@@ -14,16 +14,13 @@ export default function BuyWingTokenCard() {
             UNTIL PRICE RISE
           </div>
 
-          {/* Timer */}
           <CountdownTimer />
 
-          {/* Round Info */}
           <div className="flex justify-between text-sm text-gray-400 mb-4">
             <div>Current Round 5</div>
             <div>Next Round Price: $0.0000027991</div>
           </div>
 
-          {/* Progress Bar */}
           <div className="mb-4">
             <div className="relative">
               <div
@@ -40,7 +37,6 @@ export default function BuyWingTokenCard() {
             </div>
           </div>
 
-          {/* Purchase Info */}
           <div className="bg-purple-900/30 p-3 rounded-md mb-4">
             <div className="flex justify-between items-center">
               <span className="text-sm font-medium">YOUR PURCHASED $wing</span>
@@ -50,13 +46,11 @@ export default function BuyWingTokenCard() {
             </div>
           </div>
 
-          {/* Price */}
           <div className="text-center border-t border-b border-purple-800 py-3 mb-4">
             1 wing = $0.0000025446058
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="p-6 pt-0">
           <div dir="ltr" className="w-full mb-6">
             <div
@@ -64,7 +58,6 @@ export default function BuyWingTokenCard() {
               aria-orientation="horizontal"
               className="h-10 items-center justify-center rounded-md bg-purple-900/20 p-1 text-muted-foreground grid w-full grid-cols-2 mb-6"
             >
-              {/* ETH Tab */}
               <button
                 type="button"
                 role="tab"
@@ -77,7 +70,6 @@ export default function BuyWingTokenCard() {
                 ETH
               </button>
 
-              {/* USDT Tab */}
               <button
                 type="button"
                 role="tab"
@@ -91,10 +83,8 @@ export default function BuyWingTokenCard() {
               </button>
             </div>
 
-            {/* ETH Tab Content */}
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                {/* Pay with ETH */}
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Pay with ETH
@@ -131,7 +121,6 @@ export default function BuyWingTokenCard() {
                   </div>
                 </div>
 
-                {/* Get $wing */}
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     You will get $wing
@@ -146,7 +135,6 @@ export default function BuyWingTokenCard() {
                 </div>
               </div>
 
-              {/* Connect Wallet Button */}
               <button className="inline-flex items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full mt-2">
                 Connect Wallet
               </button>

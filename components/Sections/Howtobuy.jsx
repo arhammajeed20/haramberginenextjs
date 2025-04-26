@@ -70,7 +70,6 @@ const HowToBuy = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Join Presale Card */}
             <div className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700">
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4 text-center">
@@ -100,7 +99,6 @@ const HowToBuy = () => {
               </div>
             </div>
 
-            {/* Add Token to Wallet Card */}
             <div className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700">
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4 text-center">

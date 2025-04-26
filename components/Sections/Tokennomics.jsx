@@ -37,7 +37,6 @@ const Tokenomics = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Title */}
           <motion.h2
             variants={itemVariants}
             className="text-4xl md:text-5xl font-bold mb-8 text-center"
@@ -46,7 +45,6 @@ const Tokenomics = () => {
             <span className="text-yellow-500">omics</span>
           </motion.h2>
 
-          {/* Token Information Card */}
           <motion.div
             variants={itemVariants}
             className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700 mb-12"
@@ -94,7 +92,6 @@ const Tokenomics = () => {
             </div>
           </motion.div>
 
-          {/* Infinite Mint System Card */}
           <motion.div
             variants={itemVariants}
             className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700 mb-12"

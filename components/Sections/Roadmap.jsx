@@ -157,7 +157,6 @@ const Roadmap = () => {
               </div>
             ))}
 
-            {/* Final Space Conquest Section */}
             <div className="mt-16 pt-8 border-t border-purple-700 relative z-10">
               <div className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700 relative z-10">
                 <div className="p-6">

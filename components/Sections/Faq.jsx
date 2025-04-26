@@ -88,7 +88,6 @@ const FaqSection = () => {
                           </button>
                           {isOpen && (
                             <div className="overflow-hidden text-sm text-gray-300 pb-4">
-                              {/* You can replace this text with the actual answer if you want */}
                               <p>
                                 This is a placeholder answer for: "{question}".
                               </p>
