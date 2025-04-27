@@ -70,7 +70,7 @@ export default function Navbar() {
             : "bg-transparent"
         } transition-all duration-300 ease-in-out z-50 py-2.5`}
       >
-        <div className="container max-w-7xl mx-auto ">
+        <div className="container  mx-auto ">
           <div className="flex justify-between items-center">
             <Link href="/" className="cursor-pointer flex items-center">
               <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
