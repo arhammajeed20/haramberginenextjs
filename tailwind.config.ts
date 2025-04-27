@@ -85,13 +85,34 @@ const config: Config = {
             height: "0",
           },
         },
+        emoji: {
+          "0%": { transform: "translateY(0)", opacity: 0.7 },
+          "50%": { transform: "translateY(-30px)", opacity: 1 },
+          "100%": { transform: "translateY(0)", opacity: 0.7 },
+        },
+        "emoji-up": {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+          "50%": {
+            opacity: 1,
+          },
+          "100%": {
+            transform: "translateY(-100vh)", // Moves the emoji off-screen to the top
+            opacity: 0,
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        emoji: "emoji 5s ease-in-out infinite",
+        "emoji-up": "emoji-up 5s ease-in-out infinite", // Add the new emoji-up animation
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
 };
+
 export default config;

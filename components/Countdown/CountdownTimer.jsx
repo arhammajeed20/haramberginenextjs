@@ -38,7 +38,7 @@ export default function CountdownTimer() {
   }, [targetDate]);
 
   return (
-    <div className="flex items-center justify-between text-center">
+    <div className="flex items-center justify-center space-x-2 sm:space-x-4 text-center overflow-x-auto">
       <CountdownBox value={timeRemaining?.days} label="Days" />
       <CountdownBox
         value={
@@ -70,10 +70,12 @@ export default function CountdownTimer() {
 
 function CountdownBox({ value, label }) {
   return (
-    <div className="flex items-center justify-center   bg-purple-900/30 rounded-md mx-auto px-6">
-      <div className="flex flex-col items-center  justify-center">
-        <span className="text-[25px] sm:text-[36px] text-white">{value}</span>
-        <span className="text-white font-poppins text-[14px] sm:text-[16px]">
+    <div className="flex items-center justify-center min-w-[60px] sm:min-w-[80px] md:min-w-[100px] bg-purple-900/30 backdrop-blur-md rounded-lg shadow-md px-3 py-2 sm:px-4 sm:py-3">
+      <div className="flex flex-col items-center justify-center">
+        <span className="text-[18px] sm:text-[24px] md:text-[32px] font-bold text-white">
+          {value}
+        </span>
+        <span className="text-[10px] sm:text-[12px] md:text-[14px] font-poppins text-white">
           {label}
         </span>
       </div>

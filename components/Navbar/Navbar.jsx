@@ -63,7 +63,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Navbar */}
       <div
         className={`fixed w-full ${
           colorChange
@@ -71,9 +70,8 @@ export default function Navbar() {
             : "bg-transparent"
         } transition-all duration-300 ease-in-out z-50 py-2.5`}
       >
-        <div className="container max-w-7xl mx-auto px-4">
+        <div className="container max-w-7xl mx-auto ">
           <div className="flex justify-between items-center">
-            {/* Logo */}
             <Link href="/" className="cursor-pointer flex items-center">
               <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
                 H
@@ -83,7 +81,6 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Desktop Menu */}
             <div className="hidden lg:flex space-x-3 justify-center overflow-auto">
               {menuItems.map((item, index) => (
                 <button
@@ -96,9 +93,16 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* Hamburger Icon (Mobile + Tablet) */}
+            <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2.5 px-5 hover:opacity-90 transition-all">
+              <span className="font-semibold text-base font-urbanist">
+                Buy HBE🚀
+              </span>
+            </button>
+            <div className="hidden lg:flex items-center space-x-4">
+              <SocialLinks />
+            </div>
             <button
-              className="lg:hidden text-white" // changed from md:hidden
+              className="lg:hidden text-white"
               onClick={() => setOpenSidebar(true)}
             >
               <svg
@@ -116,26 +120,17 @@ export default function Navbar() {
                 />
               </svg>
             </button>
-
-            {/* Connect Wallet Button (Desktop Only) */}
-            <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2.5 px-5 hover:opacity-90 transition-all">
-              <span className="font-semibold text-base font-urbanist">
-                Buy HBE🚀
-              </span>
-            </button>
-            <SocialLinks />
           </div>
         </div>
       </div>
 
-      {/* Sidebar Drawer - Overlay */}
       {openSidebar && (
         <div className="fixed inset-0 z-[100] bg-black/30 backdrop-blur-sm lg:hidden transition-opacity duration-300">
           <div
             ref={sidebarRef}
-            className="fixed right-0 top-0 h-full w-64 bg-black/80 backdrop-blur-md text-white p-5 shadow-lg transform transition-transform duration-300 translate-x-0"
+            className="fixed right-0 top-0 h-full w-64 bg-black/80 backdrop-blur-md text-white shadow-lg transform transition-transform duration-300 translate-x-0"
           >
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-center mt-4 mx">
               <h2 className="font-bold text-xl">Menu</h2>
               <button onClick={() => setOpenSidebar(false)}>
                 <svg
@@ -170,10 +165,12 @@ export default function Navbar() {
               </ul>
             </div>
 
-            <button className="w-full mt-4 bg-purple-600 text-white py-2 rounded">
+            <button className="  flex px-7 mt-4 mx-auto bg-purple-600 text-white py-2 rounded">
               Buy HBE🚀
             </button>
-            <SocialLinks />
+            <div className="flex lg:hidden justify-center items-center mt-5 space-x-4">
+              <SocialLinks />
+            </div>
           </div>
         </div>
       )}

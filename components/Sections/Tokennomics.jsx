@@ -28,7 +28,7 @@ const itemVariants = {
 
 const Tokenomics = () => {
   return (
-    <section id="tokenomics" className="py-16">
+    <div id="tokenomics" className="py-16">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
@@ -149,7 +149,7 @@ const Tokenomics = () => {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 };
 

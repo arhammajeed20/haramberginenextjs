@@ -35,7 +35,7 @@ const steps = [
 
 const HowToBuy = () => {
   return (
-    <section id="how-to-buy" className="py-16 bg-black">
+    <div id="how-to-buy" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
@@ -127,7 +127,7 @@ const HowToBuy = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

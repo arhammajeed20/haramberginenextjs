@@ -1,6 +1,6 @@
 const Roadmap = () => {
   return (
-    <section
+    <div
       id="roadmap"
       className="py-16 bg-gradient-to-b from-black to-purple-950"
     >
@@ -13,7 +13,8 @@ const Roadmap = () => {
 
           {/* Timeline Line */}
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-[calc(100%-300px)] w-1 bg-purple-700 z-0"></div>
+            {/* Hidden on small screens, shown on medium and larger */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-[calc(100%-300px)] w-1 bg-purple-700 z-0"></div>
 
             {/* Timeline Phases */}
             {[
@@ -103,8 +104,10 @@ const Roadmap = () => {
                 ></div>
 
                 <div
-                  className={`flex ${
-                    phase.side === "right" ? "flex-row-reverse" : "flex-row"
+                  className={`flex flex-col md:flex-row ${
+                    phase.side === "right"
+                      ? "md:flex-row-reverse"
+                      : "md:flex-row"
                   } items-center`}
                 >
                   <div
@@ -112,7 +115,7 @@ const Roadmap = () => {
                       phase.side === "right"
                         ? "text-left pl-8"
                         : "text-right pr-8"
-                    } w-1/4`}
+                    } w-full md:w-1/4`}
                   >
                     <div className="bg-purple-900/50 inline-block px-4 py-2 rounded-full">
                       <span className="font-bold text-yellow-500">
@@ -121,9 +124,9 @@ const Roadmap = () => {
                     </div>
                   </div>
 
-                  <div className="w-1/4"></div>
+                  <div className="w-1/4 md:w-1/2"></div>
 
-                  <div className="w-1/2">
+                  <div className="w-full md:w-1/2">
                     <div
                       className={`rounded-lg text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-2 ${phase.borderColor}`}
                     >
@@ -211,7 +214,7 @@ const Roadmap = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

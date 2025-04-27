@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/not-found.jsx", "app/layout.jsx", "components/Card/BuyCard.j'sx", "components/Countdown/CountdownTimer.jsx", "components/Footer/Footer.jsx", "components/Marquee/Marquee.jsx", "components/Navbar/Navbar.jsx", "components/Sections/Herosection.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/page.jsx", "app/not-found.jsx", "app/layout.jsx", "components/Card/BuyCard.j'sx", "components/Countdown/CountdownTimer.jsx", "components/Footer/Footer.jsx", "components/Marquee/Marquee.jsx", "components/Navbar/Navbar.jsx", "components/Sections/Herosection.jsx", "lib/images.js"],
   "exclude": ["node_modules"]
 }

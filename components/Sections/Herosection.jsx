@@ -1,106 +1,138 @@
-import Image from "next/image";
-import { Sparkles } from "lucide-react";
-import { Phone } from "lucide-react";
-import { heroimage } from "@/lib/images";
+import React from "react";
 
-export default function Home() {
+const HeroSection = () => {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden relative pt-10">
-      <div className="container mx-auto px-4 py-12 relative">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="z-10 mb-10 lg:mb-0">
-            <div className="flex items-center mb-4">
-              <h1 className="text-4xl md:text-6xl font-bold">
-                🦍 Harambe is dead.
-              </h1>
-            </div>
+    <div
+      id="home"
+      className=" relative  emoji-bg bg-black flex items-center justify-center overflow-hidden pt-20"
+    >
+      <div className="absolute inset-0 z-0">
+        {[
+          "🎭",
+          "💎",
+          "🪙",
+          "🔥",
+          "🤑",
+          "👑",
+          "🎨",
+          "🎯",
+          "🤑",
+          "🎯",
+          "💎",
+          "🎯",
+          "🍆",
+          "🦍",
+          "📈",
+          "🎯",
+          "🪙",
+          "🏆",
+          "🎲",
+          "🍆",
+          "🔥",
+          "🎮",
+          "👑",
+          "🎯",
+          "🎮",
+          "🍆",
+          "📈",
+          "🎮",
+          "🔥",
+          "🎪",
+          "🎨",
+          "🏆",
+          "🎲",
+          "🎮",
+        ].map((emoji, index) => (
+          <div
+            key={index}
+            className="emoji absolute animate-emoji-up"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              fontSize: `${Math.random() * 1.5 + 0.5}em`,
+              animationDuration: `${Math.random() * 20 + 10}s`, // Randomize the duration
+              animationDelay: `${Math.random() * 5}s`, // Delay for variety
+            }}
+          >
+            {emoji}
+          </div>
+        ))}
+      </div>
 
-            <div className="mt-8 mb-6">
-              <div className="flex items-center mb-2">
-                <h2 className="text-3xl md:text-5xl font-bold text-yellow-400">
-                  🍆 He returned in the <br className="hidden md:block" />
-                  form of an eggplant
-                </h2>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3
-                className="text-2xl md:text-3xl font-bold mb-2 rainbow-glow-text glitch-text"
-                data-text="HARAMBERCINE"
-              >
-                HARAMBERCINE
-              </h3>
-              <p className="text-xl md:text-2xl font-semibold text-yellow-400">
-                He has returned.
-              </p>
-              <p className="text-lg md:text-xl">
+      <div className="container mx-auto px-10 sm:px-20 z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="lg:w-1/2 text-center lg:text-left">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">
+              <span className="text-white">
+                <span className="flex items-center">
+                  <span className="mr-2"></span> 🦍 Harambe is dead.
+                </span>
+              </span>
+              <br />
+              <span className="text-yellow-500">
+                <span className="flex items-center">
+                  <span className="mr-2"></span> 🍆 He returned in the form of
+                  an eggplant
+                </span>
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 text-shadow-light">
+              <span className="glitch-text" data-text="HARAMBERGINE">
+                HARAMBERGINE
+              </span>
+              <br />
+              <span className="text-yellow-400">He has returned.</span>
+              <br />
+              <span className="text-gray-300">
                 Once again... because he got another chance
-              </p>
+              </span>
+            </p>
+            <p className="text-gray-300 mb-8 text-shadow-light">
+              * If you remember, he never dies. *
+            </p>
 
-              <p className="text-sm mt-6 italic">
-                * If you remember, he never dies. *
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col">
+                <p className="text-gray-300 mb-2 text-sm">
+                  The only way to own a gorilla that became an eggplant
+                </p>
+                <div className="flex flex-col md:flex-row gap-4">
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-11 rounded-md px-8 bg-purple-600 hover:bg-purple-700 w-full md:w-auto">
+                    🚀 Join Presale
+                  </button>
+                  <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-11 rounded-md px-8 border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 w-full md:w-auto">
+                    🍆 Worship the Returned One
+                  </button>
+                </div>
 
-              <p className="mt-8 mb-4">
-                The only way to own a gorilla that became an eggplant
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-6">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-md flex items-center justify-center">
-                  <Sparkles className="mr-2 h-5 w-5" />
-                  Join Presale
-                </button>
-                <button className="bg-transparent hover:bg-yellow-900/30 text-yellow-400 border border-yellow-400 py-3 px-6 rounded-md flex items-center justify-center">
-                  🍆 Worship the Returned One
-                </button>
+                <p className="text-gray-400 text-xs mt-2 italic">
+                  *Absurd but real.
+                </p>
               </div>
             </div>
-
-            <p className="text-xs mt-6 text-gray-400">*Absurd but real.</p>
           </div>
 
-          <div className="relative z-10">
-            <div className="relative animate-pulse">
-              <Image
-                src={heroimage}
-                alt="Custom hero image"
-                width={500}
-                height={500}
-                className="relative z-10 mx-auto animate-[bounce_6s_ease-in-out_infinite]"
+          <div className="lg:w-1/2 relative">
+            <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] mx-auto">
+              <img
+                alt="Harambergine Image"
+                width="400"
+                height="400"
+                decoding="async"
+                className="animate-[bounce_6s_ease-in-out_infinite]"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a-hyperrealistic-illustration-of-an-eggp_H3qTo6e8Rf2P1ClQJTHzYA_6Sw5zzgMQEeplqTy4uyD5Q-removebg-preview-apOenJTXogxulTqOWg3lWtQwcWQZ9p.png"
+                style={{ color: "transparent" }}
               />
-              <div className="absolute top-10 right-10 bg-white text-black p-2 rounded-xl z-20">
-                <p className="font-bold">TO THE MOON!!! 🌕</p>
+              <div className="absolute top-0 right-0 bg-white rounded-full px-4 py-2 shadow-lg animate-[pulse_2s_ease-in-out_infinite]">
+                <p className="font-bold text-black">TO THE MOON!!! 🌕</p>
+                <div className="absolute -bottom-1 left-4 w-4 h-4 bg-white transform rotate-45"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 20 + 10}px`,
-              height: `${Math.random() * 20 + 10}px`,
-              backgroundColor: [
-                "#FFD700",
-                "#FF6B6B",
-                "#4ECDC4",
-                "#FF9F1C",
-                "#7B68EE",
-              ][Math.floor(Math.random() * 5)],
-              opacity: 0.6,
-              transform: `translate(-50%, -50%)`,
-              animation: `float ${Math.random() * 10 + 10}s linear infinite`,
-            }}
-          />
-        ))}
-      </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default HeroSection;

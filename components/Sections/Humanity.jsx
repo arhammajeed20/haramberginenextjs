@@ -3,17 +3,20 @@ import TokenInfoCard from "../Card/TokenInfoCard";
 
 export default function Humanity() {
   return (
-    <section
+    <div
       id="presale"
       className="py-16 bg-gradient-to-b from-black to-purple-950"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-shadow">
-            <span className="font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-              Humanity was not ready.
-            </span>
-          </h2>
+          <div className=" p-6 flex items-center justify-center ">
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 inline-block px-4 py-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-black">
+                Humanity was not ready.
+              </h2>
+            </div>
+          </div>
+
           <p className="text-xl text-gray-200 text-shadow-light">
             But the presale has begun.
           </p>
@@ -37,6 +40,6 @@ export default function Humanity() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
