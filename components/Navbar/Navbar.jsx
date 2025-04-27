@@ -43,10 +43,10 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "Home", link: "introduction" },
-    { name: "Who is HaramBergine", link: "" },
+    { name: "Who is HaramBergine", link: "who" },
     { name: "Tokenomics", link: "tokenomics" },
     { name: "Roadmap", link: "roadmap" },
-    { name: "How to Buy", link: "howtobuy" },
+    { name: "How to Buy", link: "presale" },
     { name: "FAQ", link: "faq" },
   ];
 
@@ -70,7 +70,7 @@ export default function Navbar() {
             : "bg-transparent"
         } transition-all duration-300 ease-in-out z-50 py-2.5`}
       >
-        <div className="container  mx-auto ">
+        <div className="container  mx-auto px-4 lg:px-10">
           <div className="flex justify-between items-center">
             <Link href="/" className="cursor-pointer flex items-center">
               <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
@@ -86,14 +86,14 @@ export default function Navbar() {
                 <button
                   key={index}
                   onClick={() => handleScroll(item.link)}
-                  className="text-white text-sm font-normal relative px-3 py-1.5 hover:before:content-[''] hover:before:absolute hover:before:inset-0 hover:before:border-2 hover:before:border-[#1FA7C9] hover:before:rounded-full hover:before:transition-all hover:before:duration-300"
+                  className="text-white text-sm font-normal relative px-3 py-1.5  hover:inset-0  hover:bg-purple-600 hover:rounded-lg hover:transition-all hover:duration-300"
                 >
                   {item.name}
                 </button>
               ))}
             </div>
 
-            <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2.5 px-5 hover:opacity-90 transition-all">
+            <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2 px-2 hover:opacity-90 transition-all">
               <span className="font-semibold text-base font-urbanist">
                 Buy HBE🚀
               </span>

@@ -1,26 +1,13 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
-      className="bg-black border-t-2 border-purple-600 text-white"
-    >
+    <footer className="bg-black border-t-2 border-purple-600 text-white">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="mb-6 md:mb-0"
-          >
+          <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
                 H
@@ -34,15 +21,9 @@ const Footer = () => {
               🚀 Harambergine to the moon!!! 🚀 TO THE MOON!!! 🚀
               Gorilla+Eggplant=Epic 🚀
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            viewport={{ once: true }}
-            className="flex space-x-6"
-          >
+          <div className="flex space-x-6">
             {/* Twitter */}
             <a
               href="https://twitter.com"
@@ -107,17 +88,11 @@ const Footer = () => {
                 <path d="M9 18c-4.51 2-5-2-7-2"></path>
               </svg>
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 1 }}
-          viewport={{ once: true }}
-          className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400"
-        >
+        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
           <p>© 2025 Harambergine. All rights reserved.</p>
           <p className="mt-2 mb-3 mx-auto max-w-3xl">
             All information provided on this site is for general reference only
@@ -139,9 +114,9 @@ const Footer = () => {
               Terms of Service
             </a>
           </p>
-        </motion.div>
+        </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
