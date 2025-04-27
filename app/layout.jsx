@@ -2,12 +2,10 @@ import "./globals.css";
 import { Metadata } from "next";
 
 export const metadata = {
-  title: "InfinitiCoin",
-  description:
-    "InfinitiCoin - Revolutionary Multi-layered Blockchain Gambling Platform",
-  generator: "v0.dev",
+  title: "Harambergine",
+  description: "HaramBergine - Meme Coin with a Purpose",
   icons: {
-    icon: "/infinitiLogocard.png",
+    icon: "./heroimage.png",
   },
 };
 
