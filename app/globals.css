@@ -48,3 +48,139 @@ html {
   animation: flip 0.6s ease-in-out;
   transform-style: preserve-3d;
 }
+/* Glitch effect */
+.glitch-text {
+  position: relative;
+  color: rgb(0, 0, 0);
+  animation: glitch 1s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #ff00c8; /* Purple-pinkish */
+  z-index: -1;
+}
+
+.glitch-text::before {
+  animation: glitchTop 1s infinite;
+}
+
+.glitch-text::after {
+  animation: glitchBottom 1s infinite;
+}
+
+/* Glitch keyframes */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px #ff00c8, -2px -2px #ffe600;
+  }
+  20% {
+    text-shadow: -2px -2px #ff00c8, 2px 2px #ffe600;
+  }
+  40% {
+    text-shadow: 2px -2px #ffe600, -2px 2px #ff00c8;
+  }
+  60% {
+    text-shadow: -2px 2px #ffe600, 2px -2px #ff00c8;
+  }
+  80% {
+    text-shadow: 2px 2px #ff00c8, -2px -2px #ffe600;
+  }
+  100% {
+    text-shadow: -2px -2px #ff00c8, 2px 2px #ffe600;
+  }
+}
+
+@keyframes glitchTop {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Pulsing glow effect */
+/* Pulsing glow effect on the text with blur */
+.pulse-opacity {
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600, 0 0 20px #ffe600,
+      0 0 40px #ffe600;
+  }
+  50% {
+    text-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 20px #800080,
+      0 0 40px #800080;
+  }
+  100% {
+    text-shadow: 0 0 5px #ffe600, 0 0 10px #ffe600, 0 0 20px #ffe600,
+      0 0 40px #ffe600;
+  }
+}
+/* Shake animation */
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.shake {
+  animation: shake 0.3s ease-in-out;
+}

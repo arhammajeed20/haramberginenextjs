@@ -42,7 +42,7 @@ const SocialLinks = () => {
   ];
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex space-x-2 ">
       {links.map((link) => (
         <a
           key={link.label}

@@ -8,11 +8,22 @@ import Tokenomics from "@/components/Sections/Tokennomics";
 import Roadmap from "@/components/Sections/Roadmap";
 import HowtoBuy from "@/components/Sections/HowtoBuy";
 import Faq from "@/components/Sections/Faq";
+import Banner from "@/components/Banner/Banner";
+import Banner2 from "@/components/Banner/Banner2";
+import Marquee from "@/components/Marquee/Marquee";
 
 export default function Home() {
   return (
     <main className="bg-[#1D1D24] w-full min-h-screen relative">
-      <Navbar />
+      <div>
+        <Navbar />
+      </div>
+
+      <div className="pt-16">
+        <Marquee />
+        <Banner />
+      </div>
+
       <div id="introduction">
         <Herosection />
       </div>
@@ -24,7 +35,6 @@ export default function Home() {
       </div>
       <div className="py-16 bg-gradient-to-b from-purple-950 to-black">
         <Who />
-
         <Tokenomics />
       </div>
       <div>
@@ -38,7 +48,9 @@ export default function Home() {
       </div>
 
       <Footer />
+      <div className="sticky bottom-0 z-50">
+        <Banner2 />
+      </div>
     </main>
-    // <Test />
   );
 }
