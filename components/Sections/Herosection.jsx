@@ -1,11 +1,12 @@
-import React from "react";
+"use client"
+
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const HeroSection = () => {
+  const { t } = useLanguage()
+
   return (
-    <div
-      id="home"
-      className=" relative  emoji-bg bg-black flex items-center justify-center overflow-hidden pt-20"
-    >
+    <div id="home" className=" relative  emoji-bg bg-black flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
         {[
           "🎭",
@@ -65,49 +66,40 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-shadow">
               <span className="text-white">
                 <span className="flex items-center">
-                  <span className="mr-2"></span> 🦍 Harambe is dead.
+                  <span className="mr-2"></span> {t("hero.title1")}
                 </span>
               </span>
               <br />
               <span className="text-yellow-500">
                 <span className="flex items-center">
-                  <span className="mr-2"></span> 🍆 He returned in the form of
-                  an eggplant
+                  <span className="mr-2"></span> {t("hero.title2")}
                 </span>
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 text-shadow-light">
-              <span className="glitch-text" data-text="HARAMBERGINE">
-                HARAMBERGINE
+              <span className="glitch-text" data-text={t("hero.subtitle1")}>
+                {t("hero.subtitle1")}
               </span>
               <br />
-              <span className="text-yellow-400">He has returned.</span>
+              <span className="text-yellow-400">{t("hero.subtitle2")}</span>
               <br />
-              <span className="text-gray-300">
-                Once again... because he got another chance
-              </span>
+              <span className="text-gray-300">{t("hero.subtitle3")}</span>
             </p>
-            <p className="text-gray-300 mb-8 text-shadow-light">
-              * If you remember, he never dies. *
-            </p>
+            <p className="text-gray-300 mb-8 text-shadow-light">{t("hero.note")}</p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <div className="flex flex-col">
-                <p className="text-gray-300 mb-2 text-sm">
-                  The only way to own a gorilla that became an eggplant
-                </p>
+                <p className="text-gray-300 mb-2 text-sm">{t("hero.ownershipText")}</p>
                 <div className="flex flex-col md:flex-row gap-4">
                   <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-11 rounded-md px-8 bg-purple-600 hover:bg-purple-700 w-full md:w-auto">
-                    🚀 Join Presale
+                    {t("hero.joinPresale")}
                   </button>
                   <button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border bg-background hover:text-accent-foreground h-11 rounded-md px-8 border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 w-full md:w-auto">
-                    🍆 Worship the Returned One
+                    {t("hero.worship")}
                   </button>
                 </div>
 
-                <p className="text-gray-400 text-xs mt-2 italic">
-                  *Absurd but real.
-                </p>
+                <p className="text-gray-400 text-xs mt-2 italic">{t("hero.absurd")}</p>
               </div>
             </div>
           </div>
@@ -132,7 +124,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

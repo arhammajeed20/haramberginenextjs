@@ -1,45 +1,43 @@
-"use client";
+"use client"
 
-import { use, useState } from "react";
+import { useState } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
-const faqData = [
-  {
-    category: "General Questions",
-    questions: [
-      "What is Harambergine?",
-      "What is Harambergine's goal?",
-      "Is this a serious project?",
-      "Why should I buy this?",
-      "Why am I buying this?",
-      "Will it be listed?",
-      "Should I buy this?",
-      "Will this pump?",
-    ],
-  },
-  {
-    category: "Token & Presale",
-    questions: [
-      "Where can I buy HBE tokens?",
-      "How long will the presale last?",
-      "When will I receive my tokens?",
-    ],
-  },
-];
+const Faq = () => {
+  const { t } = useLanguage()
+  const [openIndex, setOpenIndex] = useState(null)
 
-const FaqSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const faqData = [
+    {
+      category: t("faq.categories.general"),
+      questions: [
+        "What is Harambergine?",
+        "What is Harambergine's goal?",
+        "Is this a serious project?",
+        "Why should I buy this?",
+        "Why am I buying this?",
+        "Will it be listed?",
+        "Should I buy this?",
+        "Will this pump?",
+      ],
+    },
+    {
+      category: t("faq.categories.token"),
+      questions: ["Where can I buy HBE tokens?", "How long will the presale last?", "When will I receive my tokens?"],
+    },
+  ]
 
   const toggleQuestion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+    setOpenIndex(openIndex === index ? null : index)
+  }
 
   return (
     <div id="faq" className="py-16 bg-gradient-to-b from-purple-950 to-black">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-white">Frequently Asked </span>
-            <span className="text-yellow-500">Questions</span>
+            <span className="text-white">{t("faq.title").split(" ").slice(0, -1).join(" ")} </span>
+            <span className="text-yellow-500">{t("faq.title").split(" ").slice(-1)[0]}</span>
           </h2>
           <div className="space-y-8">
             {faqData.map((section, sectionIdx) => (
@@ -48,18 +46,13 @@ const FaqSection = () => {
                 className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700"
               >
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6">
-                    {section.category}
-                  </h3>
+                  <h3 className="text-2xl font-bold mb-6">{section.category}</h3>
                   <div className="w-full">
                     {section.questions.map((question, idx) => {
-                      const questionIndex = `${sectionIdx}-${idx}`;
-                      const isOpen = openIndex === questionIndex;
+                      const questionIndex = `${sectionIdx}-${idx}`
+                      const isOpen = openIndex === questionIndex
                       return (
-                        <div
-                          key={questionIndex}
-                          className="border-b border-purple-800"
-                        >
+                        <div key={questionIndex} className="border-b border-purple-800">
                           <button
                             type="button"
                             onClick={() => toggleQuestion(questionIndex)}
@@ -85,13 +78,11 @@ const FaqSection = () => {
                           </button>
                           {isOpen && (
                             <div className="overflow-hidden text-sm text-gray-300 pb-4">
-                              <p>
-                                This is a placeholder answer for: "{question}".
-                              </p>
+                              <p>This is a placeholder answer for: "{question}".</p>
                             </div>
                           )}
                         </div>
-                      );
+                      )
                     })}
                   </div>
                 </div>
@@ -101,7 +92,7 @@ const FaqSection = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FaqSection;
+export default Faq

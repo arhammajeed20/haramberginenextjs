@@ -3,8 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import SocialLinks from "./Sociallinks";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
+  const { t } = useLanguage();
   const [colorChange, setColorChange] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const sidebarRef = useRef(null);
@@ -42,12 +45,12 @@ export default function Navbar() {
   }, [openSidebar]);
 
   const menuItems = [
-    { name: "Home", link: "introduction" },
-    { name: "Who is HaramBergine", link: "who" },
-    { name: "Tokenomics", link: "tokenomics" },
-    { name: "Roadmap", link: "roadmap" },
-    { name: "How to Buy", link: "presale" },
-    { name: "FAQ", link: "faq" },
+    { name: t("navbar.home"), link: "introduction" },
+    { name: t("navbar.who"), link: "who" },
+    { name: t("navbar.tokenomics"), link: "tokenomics" },
+    { name: t("navbar.roadmap"), link: "roadmap" },
+    { name: t("navbar.howToBuy"), link: "presale" },
+    { name: t("navbar.faq"), link: "faq" },
   ];
 
   const handleScroll = (section) => {
@@ -70,7 +73,7 @@ export default function Navbar() {
             : "bg-transparent"
         } transition-all duration-300 ease-in-out z-50 py-2.5`}
       >
-        <div className="container mx-auto px-4 lg:px-10">
+        <div className=" mx-auto px-4 lg:px-8">
           <div className="flex justify-between items-center">
             <Link href="/" className="cursor-pointer flex items-center">
               <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
@@ -86,7 +89,7 @@ export default function Navbar() {
                   <button
                     key={index}
                     onClick={() => handleScroll(item.link)}
-                    className="text-sm sm:text-base lg:text-lg text-white font-normal relative px-3 py-1.5 hover:inset-0 hover:bg-purple-600 hover:rounded-lg hover:transition-all hover:duration-300"
+                    className="text-sm  text-white font-normal relative px-3 py-1.5 hover:inset-0 hover:bg-purple-600 hover:rounded-lg hover:transition-all hover:duration-300"
                   >
                     {item.name}
                   </button>
@@ -94,13 +97,19 @@ export default function Navbar() {
               </div>
 
               <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2 px-2 hover:opacity-90 transition-all">
-                <span className="font-semibold text-sm sm:text-base md:text-lg font-urbanist">
-                  Buy HBE🚀
+                <span className="font-semibold text-sm  font-urbanist">
+                  {t("navbar.buyButton")}
                 </span>
               </button>
+
+              <div className="px-3">
+                <LanguageSwitcher />
+              </div>
+
               <div className="px-3">
                 <SocialLinks />
               </div>
+
               <button
                 className="lg:hidden text-white"
                 onClick={() => setOpenSidebar(true)}
@@ -166,8 +175,12 @@ export default function Navbar() {
               </ul>
             </div>
 
+            <div className="mt-4 flex justify-center">
+              <LanguageSwitcher />
+            </div>
+
             <button className="flex px-7 mt-4 mx-auto bg-purple-600 text-white py-2 rounded text-sm sm:text-base md:text-lg">
-              Buy HBE🚀
+              {t("navbar.buyButton")}
             </button>
           </div>
         </div>

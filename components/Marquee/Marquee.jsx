@@ -1,8 +1,11 @@
-import { default as FastMarquee } from "react-fast-marquee";
+"use client";
 
-// Partner logos array
+import { default as FastMarquee } from "react-fast-marquee";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function MarqueeUi() {
+  const { t } = useLanguage();
+
   return (
     <div className="h-fit w-full py-2 border-y-2 border-white bg-purple-500">
       <FastMarquee
@@ -12,8 +15,7 @@ export default function MarqueeUi() {
         gradient={false}
       >
         <span className="text-lg text-white drop-shadow-[0_0_6px_white]">
-          🚀 Harambergine to the moon!!! 🚀 TO THE MOON!!! 🚀
-          Gorilla+Eggplant=Epic 🚀
+          {t("marquee")}
         </span>
       </FastMarquee>
     </div>

@@ -1,0 +1,278 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "who": "¿Qué es HaramBergine?",
+    "tokenomics": "Tokenomía",
+    "roadmap": "Hoja de Ruta",
+    "howToBuy": "Cómo Comprar",
+    "faq": "Preguntas Frecuentes",
+    "buyButton": "Comprar HBE🚀"
+  },
+  "hero": {
+    "title1": "🦍 Harambe está muerto.",
+    "title2": "🍆 Ha regresado en forma de berenjena",
+    "subtitle1": "HARAMBERGINE",
+    "subtitle2": "Ha regresado.",
+    "subtitle3": "Una vez más... porque tuvo otra oportunidad",
+    "note": "* Si recuerdas, él nunca muere. *",
+    "ownershipText": "La única forma de poseer un gorila que se convirtió en berenjena",
+    "joinPresale": "🚀 Unirse a la Preventa",
+    "worship": "🍆 Venerar al Regresado",
+    "absurd": "*Absurdo pero real."
+  },
+  "humanity": {
+    "title": "La humanidad no estaba preparada.",
+    "subtitle": "Pero la preventa ha comenzado.",
+    "warning": "🍆 Advertencia justa:",
+    "warningText1": "¿Preventa = Caída?",
+    "warningText2": "Podría genuinamente subir.",
+    "warningText3": "Contrato inteligente diseñado para la inevitable caída"
+  },
+  "features": {
+    "title": "Características de Harambergine",
+    "subtitle": "No es solo otra moneda meme",
+    "feature1": {
+      "title": "Contrato Inteligente Actualizable Innovador",
+      "description": "No se puede cultivar con él, no se puede cocinar con él. Solo seguro"
+    },
+    "feature2": {
+      "title": "Enfocado en la Comunidad",
+      "description": "Razón de existencia: Venerar al renacido. Nada más, nada menos."
+    },
+    "feature3": {
+      "title": "Economía de Tokens",
+      "description": "Esto no es un NFT, ni un DAO. Simplemente existe..."
+    }
+  },
+  "who": {
+    "title": "¿Quién es Harambergine?",
+    "birth": {
+      "title": "Nacimiento de un Meme",
+      "description1": "Harambergine es la fusión de un 'héroe sacrificado' y la 'esencia de los memes'. En 2016, Harambe dejó este mundo, pero nunca dejó nuestras memorias.",
+      "description2": "Vagó por el reino espiritual de internet hasta encontrar el recipiente más inapropiado - una berenjena (🍆). No produce nada, solo risas y confusión."
+    },
+    "legacy": {
+      "title": "El Legado de Harambe",
+      "description": "\"Morir en un zoológico, resucitar como un meme.\" Harambe era un gorila que murió injustamente en 2016, creando un impacto masivo en la cultura de internet y generando innumerables memes. Harambergine continúa este legado de internet en una nueva forma."
+    },
+    "symbolism": {
+      "title": "Simbolismo de la Berenjena",
+      "description": "El emoji de berenjena tiene varios significados en la cultura de internet. En Harambergine, la berenjena representa el recipiente que contiene el alma de Harambe y simboliza la resurrección del meme. Puede parecer inapropiado e inútil, pero esa es la esencia de un gorila de zoológico."
+    },
+    "mission": {
+      "title": "Misión de Harambergine",
+      "description": "Harambergine aspira a ir más allá de una simple moneda meme para honrar el espíritu de Harambe y preservar la esencia de la cultura de internet.",
+      "guardian": "Guardián de Memes",
+      "guardianDesc": "Preservando la cultura de internet y el espíritu de los memes",
+      "practicality": "Practicidad",
+      "practicalityDesc": "La mayoría de los zoológicos tienen la misma practicidad que los memes.",
+      "resurrection": "Resurrección del Alma",
+      "resurrectionDesc": "Recordando eternamente el alma de Harambe en una berenjena",
+      "quote": "\"Se convirtió en una berenjena, y nosotros somos sus semillas.\""
+    }
+  },
+  "tokenomics": {
+    "title": "Tokenomía",
+    "info": {
+      "title": "Información del Token",
+      "description": "El token Harambergine no tiene absolutamente ninguna utilidad. Y esa es nuestra esencia.",
+      "name": "Nombre del Token",
+      "symbol": "Símbolo del Token",
+      "supply": "Suministro Total",
+      "blockchain": "Blockchain"
+    },
+    "features": {
+      "title": "Características del Token",
+      "feature1": "Suministro que crece como una berenjena",
+      "feature2": "Comunidad tan pesada como un gorila",
+      "feature3": "Sistema especial para controlar la caída",
+      "feature4": "Nuestro valor reside en quienes lo disfrutan",
+      "feature5": "Acceso al mercado NFT (futuro)"
+    },
+    "mint": {
+      "title": "Sistema de Acuñación Infinita",
+      "step1": "Unirse a la Preventa",
+      "step1Desc": "Cuando participas en la preventa con ETH o USDT, los tokens HBE se acuñan inmediatamente.",
+      "step2": "Transferencia Instantánea a la Billetera",
+      "step2Desc": "Los tokens comprados se transfieren inmediatamente a tu billetera.",
+      "step3": "Verificar Tokens",
+      "step3Desc": "Añade la dirección del token a tu billetera para verificar inmediatamente tus tokens comprados.",
+      "note": "Nota: Harambergine utiliza una preventa de acuñación infinita, donde se acuñan nuevos tokens cada vez que participas en la preventa. Suministro como berenjena, comunidad como gorila, y titulares ligeramente locos. ¿Dumping de preventa? Preventa innovadora con protección basada en contrato."
+    }
+  },
+  "roadmap": {
+    "title": "Hoja de Ruta",
+    "phase1": {
+      "title": "Fase 1: Plantando la Semilla 🌱",
+      "status": "(Completado)",
+      "items": [
+        "El alma de Harambe habita una berenjena",
+        "Desarrollo y auditoría del contrato inteligente",
+        "Lanzamiento del sitio web y redes sociales",
+        "Comienza la construcción de la comunidad",
+        "Preparación de la preventa y marketing"
+      ]
+    },
+    "phase2": {
+      "title": "Fase 2: Primeros Brotes 🌿",
+      "status": "(En Progreso)",
+      "items": [
+        "Primeros brotes con la preventa",
+        "Creación del pool de liquidez DEX",
+        "Campaña inicial de marketing",
+        "Expansión de la comunidad"
+      ]
+    },
+    "phase3": {
+      "title": "Fase 3: Despertar del Gorila 🦍",
+      "items": [
+        "Expansión de la comunidad y construcción del ecosistema",
+        "Construcción del sistema de gobernanza DAO",
+        "Expansión de asociaciones",
+        "Lanzamiento de colección NFT",
+        "Campaña de marketing global"
+      ]
+    },
+    "phase4": {
+      "title": "Fase 4: Invasión de la Berenjena 🍆",
+      "items": [
+        "Dominación del mercado de monedas meme",
+        "Desarrollo de puente entre cadenas",
+        "Lanzamiento de aplicación móvil",
+        "Listados adicionales en CEX",
+        "Eventos comunitarios a gran escala"
+      ]
+    },
+    "phase5": {
+      "title": "Fase 5: Conquista Espacial 🚀",
+      "items": [
+        "Impulso de listado en CEX",
+        "Desarrollo del metaverso Harambergine",
+        "Expansión de servicios DeFi",
+        "Construcción de asociaciones globales",
+        "Creación de fondo del ecosistema"
+      ]
+    },
+    "spaceConquest": {
+      "title": "Conquista Espacial 🚀",
+      "description": "Harambergine aspira a trascender más allá de una simple moneda meme para convertirse en una entidad meme trascendente. Nuestro contrato y hoja de ruta se actualizan continuamente basados en la retroalimentación de la comunidad y las condiciones del mercado.",
+      "guardian": "Guardián de Memes",
+      "guardianDesc": "Preservando la cultura de internet y el espíritu de los memes",
+      "resurrection": "Resurrección del Alma",
+      "resurrectionDesc": "Recordando eternamente el alma de Harambe",
+      "revolution": "Revolución de la Berenjena",
+      "revolutionDesc": "¿Quién decide el valor de Harambe en un zoológico?",
+      "quote": "\"Más allá de la valla, nadie sabe.\""
+    }
+  },
+  "howToBuy": {
+    "title": "🦍 Cómo Conocer al Gorila Que Se Convirtió en Berenjena 🍆",
+    "subtitle": "Te guiamos a través del ritual sagrado de traer el alma de Harambe a tu billetera.",
+    "steps": [
+      {
+        "title": "1. Instala una Billetera 🧠",
+        "description": "Prepara un recipiente para el alma de Harambe. Instala MetaMask o Trust Wallet."
+      },
+      {
+        "title": "2. Carga ETH 💰",
+        "description": "Prepara la ofrenda para invocar al espíritu. Compra ETH en un exchange y transfiérelo a tu billetera."
+      },
+      {
+        "title": "3. Conecta la Billetera 🔗",
+        "description": "Conecta tu alma con Harambe. Conecta tu billetera al sitio web de Harambergine."
+      },
+      {
+        "title": "4. Compra Tokens 🚀",
+        "description": "Invoca a Harambe en forma de berenjena. Ingresa la cantidad deseada de ETH y compra tokens HBE."
+      },
+      {
+        "title": "5. Verifica los Tokens ✅",
+        "description": "Ahora eres un guardián del meme. Añade la dirección del token a tu billetera para verificar tus tokens HBE."
+      }
+    ],
+    "presale": {
+      "title": "Únete a la Preventa",
+      "description": "Participa en la preventa para estar entre los primeros en adquirir tokens Harambergine. Los tokens se acuñan en tu billetera inmediatamente después de la compra.",
+      "button": "Unirse a la Preventa"
+    },
+    "addToken": {
+      "title": "Añadir Token a la Billetera",
+      "description": "Después de la compra, añade la dirección del token a tu billetera para verificar inmediatamente tus tokens. La dirección del token se puede encontrar en el widget de preventa.",
+      "button": "Verificar Dirección del Token",
+      "congrats": "Ahora tú también te has convertido en una berenjena. ¡Felicidades! 🎉"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "categories": {
+      "general": "Preguntas Generales",
+      "token": "Token y Preventa"
+    }
+  },
+  "footer": {
+    "description": "🚀 ¡Harambergine a la luna! 🚀 ¡A LA LUNA! 🚀 Gorila+Berenjena=Épico 🚀",
+    "copyright": "© 2025 Harambergine. Todos los derechos reservados.",
+    "disclaimer": "Toda la información proporcionada en este sitio es solo para referencia general y no constituye ninguna garantía para propósitos específicos. Todas las decisiones de inversión y las pérdidas o consecuencias resultantes relacionadas con criptomonedas y activos digitales son responsabilidad exclusiva del usuario.",
+    "links": {
+      "disclaimer": "Aviso Legal",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    }
+  },
+  "buyCard": {
+    "title": "COMPRA TOKENS $wing AHORA",
+    "priceRise": "HASTA AUMENTO DE PRECIO",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "currentRound": "Ronda Actual 5",
+    "nextPrice": "Precio Próxima Ronda: $0.0000027991",
+    "purchased": "TUS $wing COMPRADOS",
+    "connectWallet": "¡Conecta tu billetera!",
+    "tokenPrice": "1 wing = $0.0000025446058",
+    "payWith": "Pagar con",
+    "max": "Máx",
+    "youWillGet": "Recibirás $wing",
+    "connectButton": "Conectar Billetera",
+    "note": "* Conecta la billetera para comprar"
+  },
+  "tokenInfo": {
+    "title": "Información del Token",
+    "symbol": "Símbolo del Token",
+    "address": "Dirección del Token",
+    "copy": "Copiar",
+    "view": "Ver",
+    "addToken": "Añadir Token a la Billetera",
+    "mintedNote": "Los tokens se acuñan inmediatamente después de la compra.",
+    "verifyNote": "Añade el token a tu billetera para verificar.",
+    "manualAdd": "Añadir token manualmente:",
+    "manualSteps": [
+      "Abre MetaMask",
+      "Haz clic en 'Importar tokens' en la parte inferior",
+      "Selecciona la pestaña 'Token personalizado'",
+      "Pega la dirección del contrato del token",
+      "El símbolo (wing) y los decimales (18) se autocompletarán",
+      "Haz clic en el botón 'Importar'"
+    ]
+  },
+  "bannerTexts": [
+    "🎫💸 Harambergine = Resurrección del meme 🎫💸",
+    "🔥 ¡El alma de Harambe te está llamando! 🔥",
+    "🪙👑 La revolución de la berenjena comienza 👑🪙",
+    "💎✊ ¡Venera el alma en la berenjena! 💎✊",
+    "🏆🏆 La inutilidad más noble de la historia 🏆🏆",
+    "👑🍆 El Rey de los Memes ha Vuelto - Harambergine 👑🍆",
+    "🦍🍆 ¡Abraza a Harambe que se convirtió en berenjena! 🦍🍆"
+  ],
+  "banner2Texts": [
+    "🎫💸 Harambergine = Resurrección del meme 🎫💸",
+    "🔥 ¡El alma de Harambe te está llamando! 🔥",
+    "🪙👑 La revolución de la berenjena comienza 👑🪙",
+    "💎✊ ¡Venera el alma en la berenjena! 💎✊",
+    "🏆🏆 La inutilidad más noble de la historia 🏆🏆",
+    "👑🍆 El Rey de los Memes ha Vuelto - Harambergine 👑🍆",
+    "🦍🍆 ¡Harambe Nunca Murió! 🦍🍆"
+  ],
+  "marquee": "🚀 ¡Harambergine a la luna! 🚀 ¡A LA LUNA! 🚀 Gorila+Berenjena=Épico 🚀"
+}

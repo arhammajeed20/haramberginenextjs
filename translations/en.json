@@ -1,0 +1,278 @@
+{
+  "navbar": {
+    "home": "Home",
+    "who": "Who is HaramBergine",
+    "tokenomics": "Tokenomics",
+    "roadmap": "Roadmap",
+    "howToBuy": "How to Buy",
+    "faq": "FAQ",
+    "buyButton": "Buy HBE🚀"
+  },
+  "hero": {
+    "title1": "🦍 Harambe is dead.",
+    "title2": "🍆 He returned in the form of an eggplant",
+    "subtitle1": "HARAMBERGINE",
+    "subtitle2": "He has returned.",
+    "subtitle3": "Once again... because he got another chance",
+    "note": "* If you remember, he never dies. *",
+    "ownershipText": "The only way to own a gorilla that became an eggplant",
+    "joinPresale": "🚀 Join Presale",
+    "worship": "🍆 Worship the Returned One",
+    "absurd": "*Absurd but real."
+  },
+  "humanity": {
+    "title": "Humanity was not ready.",
+    "subtitle": "But the presale has begun.",
+    "warning": "🍆 Fair warning:",
+    "warningText1": "Presale = Dump?",
+    "warningText2": "It might genuinely go up.",
+    "warningText3": "Smart contract designed for the inevitable dump"
+  },
+  "features": {
+    "title": "Harambergine Feature",
+    "subtitle": "Not just another meme coin",
+    "feature1": {
+      "title": "Innovative Upgradable Smart Contract",
+      "description": "Can't farm with it, can't cook with it. Just secure"
+    },
+    "feature2": {
+      "title": "Community Focused",
+      "description": "Reason for existence: To worship the reborn one. Nothing more, nothing less."
+    },
+    "feature3": {
+      "title": "Token Economics",
+      "description": "This isn't an NFT, nor a DAO. It just exists..."
+    }
+  },
+  "who": {
+    "title": "Who is Harambergine?",
+    "birth": {
+      "title": "Birth of a Meme",
+      "description1": "Harambergine is the fusion of a 'sacrificed hero' and the 'essence of memes'. In 2016, Harambe left this world, but never left our memories.",
+      "description2": "He wandered the spiritual realm of the internet until finding the most inappropriate vessel - an eggplant (🍆). He produces nothing, only laughter and confusion."
+    },
+    "legacy": {
+      "title": "Harambe's Legacy",
+      "description": "\"Die in a zoo, resurrect as a meme.\" Harambe was a gorilla who died unjustly in 2016, creating a massive impact on internet culture and spawning countless memes. Harambergine carries on this internet legacy in a new form."
+    },
+    "symbolism": {
+      "title": "Symbolism of the Eggplant",
+      "description": "The eggplant emoji has various meanings in internet culture. In Harambergine, the eggplant represents the vessel containing Harambe's soul and symbolizes the resurrection of the meme. It may seem inappropriate and useless, but that's the essence of a zoo gorilla."
+    },
+    "mission": {
+      "title": "Harambergine's Mission",
+      "description": "Harambergine aims to go beyond a simple meme coin to honor Harambe's spirit and preserve the essence of internet culture.",
+      "guardian": "Guardian of Memes",
+      "guardianDesc": "Preserving internet culture and the spirit of memes",
+      "practicality": "Practicality",
+      "practicalityDesc": "Most zoos have the same practicality as memes.",
+      "resurrection": "Soul Resurrection",
+      "resurrectionDesc": "Eternally remembering Harambe's soul in an eggplant",
+      "quote": "\"He became an eggplant, and we are his seeds.\""
+    }
+  },
+  "tokenomics": {
+    "title": "Tokenomics",
+    "info": {
+      "title": "Token Information",
+      "description": "Harambergine token has absolutely no utility. And that is our essence.",
+      "name": "Token Name",
+      "symbol": "Token Symbol",
+      "supply": "Total Supply",
+      "blockchain": "Blockchain"
+    },
+    "features": {
+      "title": "Token Features",
+      "feature1": "Supply that grows like an eggplant",
+      "feature2": "Community as heavy as a gorilla",
+      "feature3": "Special system to control the dump",
+      "feature4": "Our value lies with those who enjoy it",
+      "feature5": "NFT marketplace access (future)"
+    },
+    "mint": {
+      "title": "Infinite Mint System",
+      "step1": "Join Presale",
+      "step1Desc": "When you participate in the presale with ETH or USDT, HBE tokens are minted immediately.",
+      "step2": "Instant Wallet Transfer",
+      "step2Desc": "Purchased tokens are immediately transferred to your wallet.",
+      "step3": "Verify Tokens",
+      "step3Desc": "Add the token address to your wallet to immediately verify your purchased tokens.",
+      "note": "Note: Harambergine uses an infinite mint presale, where new tokens are minted each time you participate in the presale. Eggplant-like supply, gorilla-like community, and slightly crazy holders. Dumping presale? Innovative presale with contract-based protection."
+    }
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "phase1": {
+      "title": "Phase 1: Planting the Seed 🌱",
+      "status": "(Completed)",
+      "items": [
+        "Harambe's soul inhabits an eggplant",
+        "Smart contract development and audit",
+        "Website and social media launch",
+        "Community building begins",
+        "Presale preparation and marketing"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2: First Sprouts 🌿",
+      "status": "(In Progress)",
+      "items": [
+        "First sprouts with presale",
+        "DEX liquidity pool creation",
+        "Initial marketing campaign",
+        "Community expansion"
+      ]
+    },
+    "phase3": {
+      "title": "Phase 3: Gorilla Awakening 🦍",
+      "items": [
+        "Community expansion and ecosystem building",
+        "DAO governance system construction",
+        "Partnership expansion",
+        "NFT collection launch",
+        "Global marketing campaign"
+      ]
+    },
+    "phase4": {
+      "title": "Phase 4: Eggplant Invasion 🍆",
+      "items": [
+        "Meme coin market domination",
+        "Cross-chain bridge development",
+        "Mobile app launch",
+        "Additional CEX listings",
+        "Large-scale community events"
+      ]
+    },
+    "phase5": {
+      "title": "Phase 5: Space Conquest 🚀",
+      "items": [
+        "CEX listing push",
+        "Harambergine metaverse development",
+        "DeFi service expansion",
+        "Global partnership building",
+        "Ecosystem fund creation"
+      ]
+    },
+    "spaceConquest": {
+      "title": "Space Conquest 🚀",
+      "description": "Haramber gine aims to transcend beyond a simple meme coin to become a transcendent meme entity. Our contract and roadmap are continuously updated based on community feedback and market conditions.",
+      "guardian": "Guardian of Memes",
+      "guardianDesc": "Preserving internet culture and the spirit of memes",
+      "resurrection": "Soul Resurrection",
+      "resurrectionDesc": "Eternally remembering Harambe's soul",
+      "revolution": "Eggplant Revolution",
+      "revolutionDesc": "Who decides the value of Harambe in a zoo?",
+      "quote": "\"Beyond the fence, nobody knows.\""
+    }
+  },
+  "howToBuy": {
+    "title": "🦍 How to Meet the Gorilla Who Became an Eggplant 🍆",
+    "subtitle": "We guide you through the sacred ritual of bringing Harambe's soul into your wallet.",
+    "steps": [
+      {
+        "title": "1. Install a Wallet 🧠",
+        "description": "Prepare a vessel for Harambe's soul. Install MetaMask or Trust Wallet."
+      },
+      {
+        "title": "2. Load ETH 💰",
+        "description": "Prepare the offering to summon the spirit. Buy ETH from an exchange and transfer it to your wallet."
+      },
+      {
+        "title": "3. Connect Wallet 🔗",
+        "description": "Connect your soul with Harambe. Connect your wallet to the Harambergine website."
+      },
+      {
+        "title": "4. Buy Tokens 🚀",
+        "description": "Summon Harambe in eggplant form. Enter the desired ETH amount and purchase HBE tokens."
+      },
+      {
+        "title": "5. Verify Tokens ✅",
+        "description": "You are now a guardian of the meme. Add the token address to your wallet to verify your HBE tokens."
+      }
+    ],
+    "presale": {
+      "title": "Join the Presale",
+      "description": "Participate in the presale to be among the first to acquire Harambergine tokens. Tokens are minted to your wallet immediately upon purchase.",
+      "button": "Join Presale"
+    },
+    "addToken": {
+      "title": "Add Token to Wallet",
+      "description": "After purchase, add the token address to your wallet to immediately verify your tokens. The token address can be found in the presale widget.",
+      "button": "Check Token Address",
+      "congrats": "Now you too have become an eggplant. Congratulations! 🎉"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "categories": {
+      "general": "General Questions",
+      "token": "Token & Presale"
+    }
+  },
+  "footer": {
+    "description": "🚀 Harambergine to the moon!!! 🚀 TO THE MOON!!! 🚀 Gorilla+Eggplant=Epic 🚀",
+    "copyright": "© 2025 Harambergine. All rights reserved.",
+    "disclaimer": "All information provided on this site is for general reference only and does not constitute any guarantee for specific purposes. All investment decisions and resulting losses or consequences related to cryptocurrencies and digital assets are solely the responsibility of the user.",
+    "links": {
+      "disclaimer": "Disclaimer",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "buyCard": {
+    "title": "BUY $wing TOKENS NOW",
+    "priceRise": "UNTIL PRICE RISE",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "currentRound": "Current Round 5",
+    "nextPrice": "Next Round Price: $0.0000027991",
+    "purchased": "YOUR PURCHASED $wing",
+    "connectWallet": "Connect your wallet!",
+    "tokenPrice": "1 wing = $0.0000025446058",
+    "payWith": "Pay with",
+    "max": "Max",
+    "youWillGet": "You will get $wing",
+    "connectButton": "Connect Wallet",
+    "note": "* Connect wallet to purchase"
+  },
+  "tokenInfo": {
+    "title": "Token Information",
+    "symbol": "Token Symbol",
+    "address": "Token Address",
+    "copy": "Copy",
+    "view": "View",
+    "addToken": "Add Token to Wallet",
+    "mintedNote": "Tokens are minted immediately after purchase.",
+    "verifyNote": "Add the token to your wallet to verify.",
+    "manualAdd": "Manually add token:",
+    "manualSteps": [
+      "Open MetaMask",
+      "Click 'Import tokens' at the bottom",
+      "Select 'Custom token' tab",
+      "Paste token contract address",
+      "Symbol (wing) and decimals (18) will auto-fill",
+      "Click 'Import' button"
+    ]
+  },
+  "bannerTexts": [
+    "🎫💸 Harambergine = Resurrection of the meme 🎫💸",
+    "🔥 Harambe's soul is calling you! 🔥",
+    "🪙👑 The eggplant revolution begins 👑🪙",
+    "💎✊ Worship the soul in the eggplant! 💎✊",
+    "🏆🏆 The most noble uselessness in history 🏆🏆",
+    "👑🍆 The Meme King is Back - Harambergine 👑🍆",
+    "🦍🍆 Embrace Harambe who became an eggplant! 🦍🍆"
+  ],
+  "banner2Texts": [
+    "🎫💸 Harambergine = Resurrection of the meme 🎫💸",
+    "🔥 Harambe's soul is calling you! 🔥",
+    "🪙👑 The eggplant revolution begins 👑🪙",
+    "💎✊ Worship the soul in the eggplant! 💎✊",
+    "🏆🏆 The most noble uselessness in history 🏆🏆",
+    "👑🍆 The Meme King is Back - Harambergine 👑🍆",
+    "🦍🍆 Harambe Never Died! 🦍🍆"
+  ],
+  "marquee": "🚀 Harambergine to the moon!!! 🚀 TO THE MOON!!! 🚀 Gorilla+Eggplant=Epic 🚀"
+}

@@ -1,34 +1,27 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect } from "react";
-
-const texts = [
-  "🎫💸 Harambergine = Resurrection of the meme 🎫💸",
-  "🔥 Harambe's soul is calling you! 🔥",
-  "🪙👑 The eggplant revolution begins 👑🪙",
-  "💎✊ Worship the soul in the eggplant! 💎✊",
-  "🏆🏆 The most noble uselessness in history 🏆🏆",
-  "👑🍆 The Meme King is Back - Harambergine 👑🍆",
-  "🦍🍆 Harambe Never Died! 🦍🍆",
-];
+import { useState, useEffect } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const GlitchBanner = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const [isShaking, setIsShaking] = useState(false);
+  const { t } = useLanguage()
+  const texts = t("banner2Texts", "common")
+  const [currentTextIndex, setCurrentTextIndex] = useState(0)
+  const [isShaking, setIsShaking] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsShaking(true); // Start shake when text changes
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      setIsShaking(true) // Start shake when text changes
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
 
       // Stop shaking after animation finishes
       setTimeout(() => {
-        setIsShaking(false);
-      }, 300); // match the shake animation duration
-    }, 3000);
+        setIsShaking(false)
+      }, 300) // match the shake animation duration
+    }, 3000)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [texts.length])
 
   return (
     <div className="bg-blue-400 text-black overflow-hidden py-3 border-t-2 border-dotted border-yellow-500">
@@ -43,7 +36,7 @@ const GlitchBanner = () => {
         </span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default GlitchBanner;
+export default GlitchBanner
