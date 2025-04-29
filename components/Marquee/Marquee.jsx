@@ -1,7 +1,7 @@
 "use client";
 
 import { default as FastMarquee } from "react-fast-marquee";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function MarqueeUi() {
   const { t } = useLanguage();

@@ -1,6 +1,6 @@
-"use client"
-import { motion } from "framer-motion"
-import { useLanguage } from "@/contexts/LanguageContext"
+"use client";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const containerVariants = {
   hidden: {},
@@ -9,7 +9,7 @@ const containerVariants = {
       staggerChildren: 0.25,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 50, scale: 0.9 },
@@ -23,10 +23,10 @@ const itemVariants = {
       damping: 15,
     },
   },
-}
+};
 
 const Tokenomics = () => {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <div id="tokenomics" className="py-16">
@@ -38,8 +38,13 @@ const Tokenomics = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="max-w-4xl mx-auto"
         >
-          <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-white">{t("tokenomics.title").split("omics")[0]}</span>
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold mb-8 text-center"
+          >
+            <span className="text-white">
+              {t("tokenomics.title").split("omics")[0]}
+            </span>
             <span className="text-yellow-500">omics</span>
           </motion.h2>
 
@@ -48,25 +53,44 @@ const Tokenomics = () => {
             className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700 mb-12"
           >
             <div className="p-6">
-              <h2 className="text-2xl font-bold mb-6 text-center">{t("tokenomics.info.title")}</h2>
-              <p className="text-center text-gray-300 mb-6">{t("tokenomics.info.description")}</p>
+              <h2 className="text-2xl font-bold mb-6 text-center">
+                {t("tokenomics.info.title")}
+              </h2>
+              <p className="text-center text-gray-300 mb-6">
+                {t("tokenomics.info.description")}
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 {[
                   { label: t("tokenomics.info.name"), value: "Harambergine" },
                   { label: t("tokenomics.info.symbol"), value: "HBE" },
-                  { label: t("tokenomics.info.supply"), value: "1,000,000,000 HBE" },
-                  { label: t("tokenomics.info.blockchain"), value: "Ethereum (ERC-20)" },
+                  {
+                    label: t("tokenomics.info.supply"),
+                    value: "1,000,000,000 HBE",
+                  },
+                  {
+                    label: t("tokenomics.info.blockchain"),
+                    value: "Ethereum (ERC-20)",
+                  },
                 ].map((item, index) => (
-                  <motion.div variants={itemVariants} key={index} className="bg-purple-800/30 p-4 rounded-lg">
+                  <motion.div
+                    variants={itemVariants}
+                    key={index}
+                    className="bg-purple-800/30 p-4 rounded-lg"
+                  >
                     <h3 className="font-bold mb-2">{item.label}</h3>
                     <p className="text-xl">{item.value}</p>
                   </motion.div>
                 ))}
               </div>
 
-              <motion.div variants={itemVariants} className="bg-purple-800/30 p-4 rounded-lg mb-8">
-                <h3 className="font-bold mb-4">{t("tokenomics.features.title")}</h3>
+              <motion.div
+                variants={itemVariants}
+                className="bg-purple-800/30 p-4 rounded-lg mb-8"
+              >
+                <h3 className="font-bold mb-4">
+                  {t("tokenomics.features.title")}
+                </h3>
                 <ul className="list-disc list-inside space-y-2 text-gray-300">
                   <li>{t("tokenomics.features.feature1")}</li>
                   <li>{t("tokenomics.features.feature2")}</li>
@@ -83,7 +107,9 @@ const Tokenomics = () => {
             className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700 mb-12"
           >
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-6 text-center">{t("tokenomics.mint.title")}</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center">
+                {t("tokenomics.mint.title")}
+              </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {[
@@ -121,14 +147,16 @@ const Tokenomics = () => {
                 variants={itemVariants}
                 className="mt-6 p-4 bg-yellow-500/20 border border-yellow-500 rounded-lg"
               >
-                <p className="text-center text-yellow-300">{t("tokenomics.mint.note")}</p>
+                <p className="text-center text-yellow-300">
+                  {t("tokenomics.mint.note")}
+                </p>
               </motion.div>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Tokenomics
+export default Tokenomics;

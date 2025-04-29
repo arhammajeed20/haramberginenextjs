@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useLanguage } from "@/contexts/LanguageContext"
+import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Faq = () => {
-  const { t } = useLanguage()
-  const [openIndex, setOpenIndex] = useState(null)
+  const { t } = useLanguage();
+  const [openIndex, setOpenIndex] = useState(null);
 
   const faqData = [
     {
@@ -23,21 +23,29 @@ const Faq = () => {
     },
     {
       category: t("faq.categories.token"),
-      questions: ["Where can I buy HBE tokens?", "How long will the presale last?", "When will I receive my tokens?"],
+      questions: [
+        "Where can I buy HBE tokens?",
+        "How long will the presale last?",
+        "When will I receive my tokens?",
+      ],
     },
-  ]
+  ];
 
   const toggleQuestion = (index) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   return (
     <div id="faq" className="py-16 bg-gradient-to-b from-purple-950 to-black">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-white">{t("faq.title").split(" ").slice(0, -1).join(" ")} </span>
-            <span className="text-yellow-500">{t("faq.title").split(" ").slice(-1)[0]}</span>
+            <span className="text-white">
+              {t("faq.title").split(" ").slice(0, -1).join(" ")}{" "}
+            </span>
+            <span className="text-yellow-500">
+              {t("faq.title").split(" ").slice(-1)[0]}
+            </span>
           </h2>
           <div className="space-y-8">
             {faqData.map((section, sectionIdx) => (
@@ -46,13 +54,18 @@ const Faq = () => {
                 className="rounded-lg border-2 text-card-foreground shadow-[0_5px_15px_rgba(128,0,255,0.3)] bg-purple-900/20 border-purple-700"
               >
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6">{section.category}</h3>
+                  <h3 className="text-2xl font-bold mb-6">
+                    {section.category}
+                  </h3>
                   <div className="w-full">
                     {section.questions.map((question, idx) => {
-                      const questionIndex = `${sectionIdx}-${idx}`
-                      const isOpen = openIndex === questionIndex
+                      const questionIndex = `${sectionIdx}-${idx}`;
+                      const isOpen = openIndex === questionIndex;
                       return (
-                        <div key={questionIndex} className="border-b border-purple-800">
+                        <div
+                          key={questionIndex}
+                          className="border-b border-purple-800"
+                        >
                           <button
                             type="button"
                             onClick={() => toggleQuestion(questionIndex)}
@@ -78,11 +91,13 @@ const Faq = () => {
                           </button>
                           {isOpen && (
                             <div className="overflow-hidden text-sm text-gray-300 pb-4">
-                              <p>This is a placeholder answer for: "{question}".</p>
+                              <p>
+                                This is a placeholder answer for: "{question}".
+                              </p>
                             </div>
                           )}
                         </div>
-                      )
+                      );
                     })}
                   </div>
                 </div>
@@ -92,7 +107,7 @@ const Faq = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;

@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useLanguage } from "@/contexts/LanguageContext"
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const GlitchBanner = () => {
-  const { t } = useLanguage()
-  const texts = t("bannerTexts", "common")
-  const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isShaking, setIsShaking] = useState(false)
+  const { t } = useLanguage();
+  const texts = t("bannerTexts", "common");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isShaking, setIsShaking] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsShaking(true) // Start shake when text changes
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
+      setIsShaking(true); // Start shake when text changes
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
 
       // Stop shaking after animation finishes
       setTimeout(() => {
-        setIsShaking(false)
-      }, 300) // match the shake animation duration
-    }, 3000)
+        setIsShaking(false);
+      }, 300); // match the shake animation duration
+    }, 3000);
 
-    return () => clearInterval(interval)
-  }, [texts.length])
+    return () => clearInterval(interval);
+  }, [texts.length]);
 
   return (
     <div className="bg-yellow-400 text-black overflow-hidden py-3 border-b-2 border-purple-500">
@@ -36,7 +36,7 @@ const GlitchBanner = () => {
         </span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default GlitchBanner
+export default GlitchBanner;

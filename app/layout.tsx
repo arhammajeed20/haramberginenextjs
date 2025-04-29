@@ -1,5 +1,6 @@
 import "./globals.css";
-import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LanguageProvider } from "@/context/LanguageContext";
+import ContextProvider from "@/context";
 
 // Import translations directly from our translations directory
 import enTranslations from "@/translations/en.json";
@@ -27,12 +28,16 @@ export const metadata = {
   generator: "v0.dev",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <LanguageProvider translations={translations} defaultLocale="en">
         <body className="bg-[#1D1D24] text-white overflow-x-hidden">
-          {children}
+          <ContextProvider cookies={null}>{children}</ContextProvider>
         </body>
       </LanguageProvider>
     </html>

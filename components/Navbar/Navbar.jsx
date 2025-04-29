@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import SocialLinks from "./Sociallinks";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
   const { t } = useLanguage();
@@ -73,40 +73,49 @@ export default function Navbar() {
             : "bg-transparent"
         } transition-all duration-300 ease-in-out z-50 py-2.5`}
       >
-        <div className=" mx-auto px-4 lg:px-8">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="cursor-pointer flex items-center">
-              <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
-                H
-              </div>
-              <span className="ml-2 text-sm sm:text-lg md:text-xl font-bold">
-                Haram<span className="text-yellow-400">bergine</span>
-              </span>
-            </Link>
-            <div className="flex items-center justify-center">
-              <div className="hidden lg:flex space-x-3 justify-center overflow-auto">
+        <div className="mx-auto px-4 lg:px-8">
+          {/* Main navbar layout with 3 sections */}
+          <div className="flex items-center justify-between">
+            {/* Left section - Logo */}
+            <div className="w-1/4">
+              <Link href="/" className="cursor-pointer flex items-center">
+                <div className="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-lg sm:text-xl md:text-2xl shadow-[0_0_10px_rgba(170,0,255,0.7)]">
+                  H
+                </div>
+                <span className="ml-2 text-sm sm:text-lg md:text-xl font-bold">
+                  Haram<span className="text-yellow-400">bergine</span>
+                </span>
+              </Link>
+            </div>
+
+            {/* Center section - Navigation Links */}
+            <div className="hidden lg:flex justify-center w-2/4">
+              <div className="flex space-x-3 justify-center">
                 {menuItems.map((item, index) => (
                   <button
                     key={index}
                     onClick={() => handleScroll(item.link)}
-                    className="text-sm  text-white font-normal relative px-3 py-1.5 hover:inset-0 hover:bg-purple-600 hover:rounded-lg hover:transition-all hover:duration-300"
+                    className="text-sm text-white font-normal relative px-3 py-1.5 hover:inset-0 hover:bg-purple-600 hover:rounded-lg hover:transition-all hover:duration-300"
                   >
                     {item.name}
                   </button>
                 ))}
               </div>
+            </div>
 
+            {/* Right section - Action buttons */}
+            <div className="flex items-center justify-end w-1/4 space-x-2">
               <button className="hidden lg:block bg-purple-600 text-white rounded-lg font-bold py-2 px-2 hover:opacity-90 transition-all">
-                <span className="font-semibold text-sm  font-urbanist">
+                <span className="font-semibold text-sm font-urbanist">
                   {t("navbar.buyButton")}
                 </span>
               </button>
 
-              <div className="px-3">
+              <div className="px-1">
                 <LanguageSwitcher />
               </div>
 
-              <div className="px-3">
+              <div className="px-1">
                 <SocialLinks />
               </div>
 

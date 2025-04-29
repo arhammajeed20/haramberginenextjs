@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/contexts/LanguageContext"
+import { useLanguage } from "@/context/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-black border-t-2 border-purple-600 text-white">
@@ -19,12 +19,18 @@ const Footer = () => {
                 <span className="text-yellow-400 neon-yellow">bergine</span>
               </span>
             </a>
-            <p className="mt-2 text-sm text-gray-400">{t("footer.description")}</p>
+            <p className="mt-2 text-sm text-gray-400">
+              {t("footer.description")}
+            </p>
           </div>
 
           <div className="flex space-x-6">
             {/* Twitter */}
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -42,7 +48,11 @@ const Footer = () => {
             </a>
 
             {/* Telegram */}
-            <a href="https://t.me/harambergine" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://t.me/harambergine"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="relative w-6 h-6 text-gray-400 hover:text-white group">
                 <img
                   alt="Telegram"
@@ -58,7 +68,11 @@ const Footer = () => {
             </a>
 
             {/* GitHub */}
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -81,7 +95,9 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
           <p>{t("footer.copyright")}</p>
-          <p className="mt-2 mb-3 mx-auto max-w-3xl">{t("footer.disclaimer")}</p>
+          <p className="mt-2 mb-3 mx-auto max-w-3xl">
+            {t("footer.disclaimer")}
+          </p>
           <p className="mt-2">
             <a href="/#disclaimer" className="hover:text-white hover:underline">
               {t("footer.links.disclaimer")}
@@ -98,7 +114,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

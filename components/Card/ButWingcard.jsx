@@ -1,8 +1,11 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useAppKit, useAppKitAccount } from "@reown/appkit/react";
 
 export default function BuyWingTokenCard() {
   const [activeTab, setActiveTab] = useState("ETH");
+  const { open } = useAppKit(); // Open Wallet Modal
+  const { address, isConnected } = useAppKitAccount(); // Get Wallet Address & Connection Status
 
   // Countdown Timer State
   const [timeRemaining, setTimeRemaining] = useState({
@@ -217,8 +220,13 @@ export default function BuyWingTokenCard() {
               </div>
 
               {/* Connect Wallet Button */}
-              <button className="inline-flex items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 h-10 px-4 py-2 w-full mt-2">
-                Connect Wallet
+              <button
+                onClick={() => open()}
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-purple-500 text-primary-foreground hover:bg-purple-700 transition-all duration-300 h-10 px-4 py-2 w-full mt-2"
+              >
+                {isConnected
+                  ? `${address.slice(0, 6)}...${address.slice(-4)}`
+                  : "Connect Wallet"}
               </button>
 
               <div className="text-center text-xs text-gray-400 mt-2">

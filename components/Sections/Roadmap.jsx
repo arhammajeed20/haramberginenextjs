@@ -1,16 +1,21 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/contexts/LanguageContext"
+import { useLanguage } from "@/context/LanguageContext";
 
 const Roadmap = () => {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
-    <div id="roadmap" className="py-16 bg-gradient-to-b from-black to-purple-950">
+    <div
+      id="roadmap"
+      className="py-16 bg-gradient-to-b from-black to-purple-950"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-white">{t("roadmap.title").split("map")[0]}</span>
+            <span className="text-white">
+              {t("roadmap.title").split("map")[0]}
+            </span>
             <span className="text-yellow-500">map</span>
           </h2>
 
@@ -79,12 +84,22 @@ const Roadmap = () => {
 
                 <div
                   className={`flex flex-col md:flex-row ${
-                    phase.side === "right" ? "md:flex-row-reverse" : "md:flex-row"
+                    phase.side === "right"
+                      ? "md:flex-row-reverse"
+                      : "md:flex-row"
                   } items-center`}
                 >
-                  <div className={`${phase.side === "right" ? "text-left pl-8" : "text-right pr-8"} w-full md:w-1/4`}>
+                  <div
+                    className={`${
+                      phase.side === "right"
+                        ? "text-left pl-8"
+                        : "text-right pr-8"
+                    } w-full md:w-1/4`}
+                  >
                     <div className="bg-purple-900/50 inline-block px-4 py-2 rounded-full">
-                      <span className="font-bold text-yellow-500">{phase.quarter}</span>
+                      <span className="font-bold text-yellow-500">
+                        {phase.quarter}
+                      </span>
                     </div>
                   </div>
 
@@ -97,14 +112,20 @@ const Roadmap = () => {
                       <div className="p-6">
                         <h2 className="text-xl font-bold mb-4">
                           {phase.phaseTitle}
-                          {phase.status && <span className={`ml-2 ${phase.statusColor}`}>{phase.status}</span>}
+                          {phase.status && (
+                            <span className={`ml-2 ${phase.statusColor}`}>
+                              {phase.status}
+                            </span>
+                          )}
                         </h2>
                         <ul className="space-y-2">
                           {phase.items.map((item, idx) => (
                             <li key={idx} className="flex items-start">
                               <span
                                 className={`inline-block w-5 h-5 rounded-full mr-2 flex-shrink-0 ${
-                                  idx < 2 || phase.statusColor ? phase.bgColor : "bg-gray-700"
+                                  idx < 2 || phase.statusColor
+                                    ? phase.bgColor
+                                    : "bg-gray-700"
                                 }`}
                               ></span>
                               <span className="text-gray-300">{item}</span>
@@ -123,8 +144,12 @@ const Roadmap = () => {
                 <div className="p-6">
                   <div className="absolute inset-0 bg-black"></div>
                   <div className="relative z-10">
-                    <h2 className="text-2xl font-bold mb-4 text-center">{t("roadmap.spaceConquest.title")}</h2>
-                    <p className="text-gray-300 text-center mb-6">{t("roadmap.spaceConquest.description")}</p>
+                    <h2 className="text-2xl font-bold mb-4 text-center">
+                      {t("roadmap.spaceConquest.title")}
+                    </h2>
+                    <p className="text-gray-300 text-center mb-6">
+                      {t("roadmap.spaceConquest.description")}
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       {[
@@ -134,21 +159,32 @@ const Roadmap = () => {
                         },
                         {
                           title: t("roadmap.spaceConquest.resurrection"),
-                          description: t("roadmap.spaceConquest.resurrectionDesc"),
+                          description: t(
+                            "roadmap.spaceConquest.resurrectionDesc"
+                          ),
                         },
                         {
                           title: t("roadmap.spaceConquest.revolution"),
-                          description: t("roadmap.spaceConquest.revolutionDesc"),
+                          description: t(
+                            "roadmap.spaceConquest.revolutionDesc"
+                          ),
                         },
                       ].map((card, idx) => (
-                        <div key={idx} className="bg-purple-800/30 p-4 rounded-lg text-center">
+                        <div
+                          key={idx}
+                          className="bg-purple-800/30 p-4 rounded-lg text-center"
+                        >
                           <h3 className="font-bold mb-2">{card.title}</h3>
-                          <p className="text-sm text-gray-400">{card.description}</p>
+                          <p className="text-sm text-gray-400">
+                            {card.description}
+                          </p>
                         </div>
                       ))}
                     </div>
 
-                    <p className="text-center text-yellow-400 mt-6 italic">{t("roadmap.spaceConquest.quote")}</p>
+                    <p className="text-center text-yellow-400 mt-6 italic">
+                      {t("roadmap.spaceConquest.quote")}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -157,7 +193,7 @@ const Roadmap = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Roadmap
+export default Roadmap;

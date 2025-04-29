@@ -1,9 +1,9 @@
-"use client"
-import { motion } from "framer-motion"
-import { useLanguage } from "@/contexts/LanguageContext"
+"use client";
+import { motion } from "framer-motion";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Features = () => {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   const features = [
     {
@@ -21,7 +21,7 @@ const Features = () => {
       title: t("features.feature3.title"),
       description: t("features.feature3.description"),
     },
-  ]
+  ];
 
   return (
     <div>
@@ -43,14 +43,18 @@ const Features = () => {
               <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-2xl shadow-[0_0_10px_rgba(170,0,255,0.7)] mb-4">
                 {feature.icon}
               </div>
-              <div className="text-2xl text-center font-bold mb-2">{feature.title}</div>
-              <div className="text-center text-lg text-gray-300">{feature.description}</div>
+              <div className="text-2xl text-center font-bold mb-2">
+                {feature.title}
+              </div>
+              <div className="text-center text-lg text-gray-300">
+                {feature.description}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
